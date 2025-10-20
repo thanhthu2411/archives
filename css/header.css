@@ -1,0 +1,184 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #ACC8E5; */
+    background-color: rgba(172, 200, 229);
+
+}
+
+.logo {
+    height: 50px;
+    width: 90px;
+    display: block;
+    margin-left: 0.7rem;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;    
+}
+
+header button {
+    background-color: #ACC8E5;
+    border: none;
+}
+
+/* header right section  */
+.header-right {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    border-left: 1px solid #112A46 ;
+    padding: 1.2rem;
+    font-size: 1rem;
+
+}
+
+.search-btn {
+    margin-top: 6px;
+
+}
+
+.search-form {
+    display: none;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 150px;
+    max-width: 600px;
+    height: 30px;
+    padding: 0.3rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.search-form select {
+    border-radius: 5px;
+}
+
+.search-form button {
+    background-color: transparent;
+}
+
+.search-form.active-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    background-color: rgba(172, 200, 229);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+@media(max-width: 767px) {
+    .search-input {
+        flex: none;
+        width: 250px;
+    }
+
+}
+
+.close-btn {
+    background-color: transparent;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+}
+
+.close-btn .icon {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* drop down menu  */
+
+ .nav-container {
+    display: none;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.favorite-btn {
+    background-color: transparent;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.active-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2rem;
+
+}
+
+@media(min-width: 768px) {
+        
+    header { 
+        padding: 0.5rem;
+    }
+
+    .header-right {
+        gap: 1.2rem;
+        padding: 0.8rem 1rem;
+        flex: 1;
+        justify-content: flex-end;
+        margin-left: 2rem;
+    }
+
+    .search-btn, .menu-btn {
+        display: none;
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        max-width: 600px;
+        flex: 1;
+    }
+
+
+    .search-form select {
+        flex-shrink: 0;
+        padding: 0.3rem;
+    }
+
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .nav-container a, .nav-container button {
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+}
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book</title>
+    <link href="css/book.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <script type="module" src="js/base.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <section class="header-left">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="logo of the webapp" />
+        </a>
+      </section>
+
+      <section class="header-right">
+        <!-- search icon  -->
+        <button class="search-btn">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#search"></use>
+          </svg>
+        </button>
+
+        <form action="searchresults.html" method="get" class="search-form">
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Please enter a keyword ..."
+          />
+          <select>
+            <option>All</option>
+            <option>Author</option>
+            <option>Title</option>
+            <option>Genre</option>
+          </select>
+          <button type="submit">
+            <svg class="icon">
+              <use xlink:href="images/sprite.symbol.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <!-- drop down menu  -->
+        <button class="menu-btn">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#menu"></use>
+          </svg>
+          MENU
+        </button>
+
+        <!-- menu expand  -->
+        <nav class="nav-container">
+          <a href="contact.html">Contact Us</a>
+          <button class="favorite-btn">
+            <svg class="icon">
+              <use xlink:href="images/sprite.symbol.svg#bookmark"></use>
+            </svg>
+            Your Favorites
+          </button>
+
+          <ul class="favorite-list hidden"></ul>
+        </nav>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main></main>
+
+    <!-- FOOTER  -->
+    <footer>
+      <!-- left  -->
+      <section class="footer-left">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="logo of the webapp" />
+        </a>
+      </section>
+      <!-- middle  -->
+      <section class="footer-middle">
+        <ul class="footer-links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="index.html#trending">Trending</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+        </ul>
+      </section>
+      <!-- right  -->
+      <section class="footer-right">
+        <a class="social-link" target="_bFlank" href="https://facebook.com">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#facebook"></use>
+          </svg>
+        </a>
+        <a class="social-link" target="_bFlank" href="https://instagram.com">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#instagram"></use>
+          </svg>
+        </a>
+        <a class="social-link" target="_bFlank" href="https://twitter.com">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#twitter"></use>
+          </svg>
+        </a>
+      </section>
+    </footer>
+  </body>
+</html>

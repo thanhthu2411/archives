@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Mono:wght@100..900&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+font-size: 18px;
+margin: 0;
+}
+
+body p, body a, body div {
+  font-family: "Poppins", Helvetica, sans-serif;;
+}
+
+  body h1, body h2, body h3 {
+    font-family: Merriweather, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+a:hover {
+    text-decoration: underline;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+/* Title and logo styling */
+
+.site-title {
+  display: flex;
+  align-items: center;
+}
+.site-title > span {
+  font-size: 1rem;
+  margin-left: 0.3em;
+}
+
+/* .logo {
+  height: 0;
+  width: 0;
+  margin: 0.5em;
+  display: inline-block;
+  border-top: 34px solid var(--bs-light-green);
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+} */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* hidden  */
+.hidden {
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+}

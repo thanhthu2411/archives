@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archives</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/base.js"></script>
+  </head>
+  <body>
+    <header>
+      <section class="header-left">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="logo of the webapp" />
+        </a>
+      </section>
+
+      <section class="header-right">
+        <!-- search icon  -->
+        <button class="search-btn">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#search"></use>
+          </svg>
+        </button>
+
+        <form action="searchresults.html" method="get" class="search-form">
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Please enter a keyword ..."
+          />
+          <select>
+            <option>All</option>
+            <option>Author</option>
+            <option>Title</option>
+            <option>Genre</option>
+          </select>
+          <button type="submit">
+            <svg class="icon">
+              <use xlink:href="images/sprite.symbol.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <!-- drop down menu  -->
+        <button class="menu-btn">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#menu"></use>
+          </svg>
+          MENU
+        </button>
+
+        <!-- menu expand  -->
+        <nav class="nav-container">
+          <a href="contact.html">Contact Us</a>
+          <button class="favorite-btn">
+            <svg class="icon">
+              <use xlink:href="images/sprite.symbol.svg#bookmark"></use>
+            </svg>
+            Your Favorites
+          </button>
+
+          <ul class="favorite-list hidden"></ul>
+        </nav>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="hero-container">
+        <div class="hero-left">
+          <img src="images/hero.jpg" alt="hero image" />
+        </div>
+        <div class="hero-right">
+          <h1>Discover, Read, and Explore</h1>
+          <p>
+            Search millions of books, explore trending titles, and find your
+            next great read — all in one place. From gripping novels to
+            inspiring non-fiction, uncover hidden gems, track your favorites,
+            and join a community of passionate readers.
+          </p>
+        </div>
+      </section>
+
+      <div class="line"></div>
+      <!-- top favorite books  -->
+      <section id="trending" class="favorite-container">
+        <h1>Top Favorites Books</h1>
+        <p>
+          Explore our top favorite books — handpicked for their unforgettable
+          stories, inspiring lessons, and timeless appeal. Dive in and find your
+          next favorite today!
+        </p>
+        <div class="books">
+          <div class="book">
+            <div>
+              <img class="book-img" src="https://picsum.photos/600/400" />
+            </div>
+            <div class="book-info-container">
+              <h2>Book title</h2>
+              <p>Author</p>
+              <p>Book description</p>
+              <p>Category</p>
+            </div>
+          </div>
+          <div class="book">
+            <div>
+              <img class="book-img" src="https://picsum.photos/600/400" />
+            </div>
+            <div class="book-info-container">
+              <h2>Book title</h2>
+              <p>Author</p>
+              <p>Book description</p>
+              <p>Category</p>
+            </div>
+          </div>
+          <div class="book">
+            <div>
+              <img class="book-img" src="https://picsum.photos/600/400" />
+            </div>
+            <div class="book-info-container">
+              <h2>Book title</h2>
+              <p>Author</p>
+              <p>Book description</p>
+              <p>Category</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- top recommended books  -->
+      <section id="recommended" class="recommended-container">
+        <h1>Recommended for you</h1>
+        <p>
+          Your next favorite read is waiting! Explore recommendations tailored
+          to your interests and reading style.
+        </p>
+        <div class="books">
+          <div class="book">
+            <div>
+              <img class="book-img" src="https://picsum.photos/600/400" />
+            </div>
+            <div class="book-info-container">
+              <h2>Book title</h2>
+              <p>Author</p>
+              <p>Book description</p>
+              <p>Category</p>
+            </div>
+          </div>
+          <div class="book">
+            <div>
+              <img class="book-img" src="https://picsum.photos/600/400" />
+            </div>
+            <div class="book-info-container">
+              <h2>Book title</h2>
+              <p>Author</p>
+              <p>Book description</p>
+              <p>Category</p>
+            </div>
+          </div>
+          <div class="book">
+            <div>
+              <img class="book-img" src="https://picsum.photos/600/400" />
+            </div>
+            <div class="book-info-container">
+              <h2>Book title</h2>
+              <p>Author</p>
+              <p>Book description</p>
+              <p>Category</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- feebback  -->
+      <section class="feebback-container">
+        <h1>What our users say</h1>
+        <div class="feedback-content">
+          <div class="feedback">
+            <img src="images/user1.jpg" alt="photo of User1" />
+            <div>
+              <h3>Anna s.</h3>
+              <p>
+                I love how easy it is to search for books and discover new
+                titles! The ‘Recommended for You’ section always suggests
+                something I actually enjoy. It feels like the website really
+                understands my reading taste.
+              </p>
+              <div class="star">⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="feedback">
+            <img src="images/user2.jpg" alt="photo of User2" />
+            <div>
+              <h3>Jacob H.</h3>
+              <p>
+                This library site makes finding books so simple. I can check
+                what’s trending, read summaries, and even see ratings before
+                deciding what to borrow. The design is clean, cozy, and perfect
+                for book lovers.
+              </p>
+              <div class="star">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+        <a class="feedback-btn" href="contact.html">Contact Us</a>
+
+      </section>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+      <!-- left  -->
+      <section class="footer-left">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="logo of the webapp" />
+        </a>
+      </section>
+      <!-- middle  -->
+      <section class="footer-middle">
+        <ul class="footer-links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="index.html#trending">Trending</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+        </ul>
+      </section>
+      <!-- right  -->
+      <section class="footer-right">
+        <a class="social-link" target="_bFlank" href="https://facebook.com">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#facebook"></use>
+          </svg>
+        </a>
+        <a class="social-link" target="_bFlank" href="https://instagram.com">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#instagram"></use>
+          </svg>
+        </a>
+        <a class="social-link" target="_bFlank" href="https://twitter.com">
+          <svg class="icon">
+            <use xlink:href="images/sprite.symbol.svg#twitter"></use>
+          </svg>
+        </a>
+      </section>
+    </footer>
+  </body>
+</html>
