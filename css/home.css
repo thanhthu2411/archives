@@ -70,11 +70,18 @@
     display: flex;
     flex-direction: column;
     border: 1px solid var(--bs-grey-3);
+    width: 100%;
 }
 
 .book img {
-    width: 350px;
-    height: 250px;
+    height: 100%;
+    display: block;
+    margin: 1rem auto;
+}
+
+.img-container {
+    height: 200px;
+    margin-bottom: 1rem;
 }
 
 .book h2 {
@@ -91,11 +98,9 @@
     .books {
         flex-direction: row;
         justify-content: center;
+        align-items: stretch;
     }
 
-    .book img {
-        width: 100%;
-    }
 
     .recommended-container > p, .favorite-container > p {
         width: 80%;

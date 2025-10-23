@@ -23,8 +23,15 @@ body p, body a, body div {
     text-align: center;
   }
 
+a {
+  color: black;
+  text-decoration: none;
+} 
+
 a:hover {
     text-decoration: underline;
+    color: blue;
+    cursor: pointer;
 }
 
 .icon:hover {

@@ -7,6 +7,7 @@
     <link href="css/searchresults.css" rel="stylesheet" />
     <link href="css/base.css" rel="stylesheet" />
     <script type="module" src="js/base.js"></script>
+    <script type="module" src="js/searchResult.js"></script>
   </head>
   <body>
     <!-- HEADER  -->
@@ -27,9 +28,11 @@
 
         <form action="searchresults.html" method="get" class="search-form">
           <input
+            name="q"
             class="search-input"
             type="text"
             placeholder="Please enter a keyword ..."
+            required
           />
           <select>
             <option>All</option>
@@ -69,9 +72,9 @@
 
     <!-- MAIN  -->
     <main>
-      <h1>Search Results for <span>[Query]</span></h1>
+      <h1>Search Results for <span style="color: red;"></span></h1>
       <ul class="book-list">
-        <li>
+        <!-- <li>
           <img class="book-img" src="https://picsum.photos/400/600" />
           <h2>Title</h2>
 
@@ -144,7 +147,7 @@
             </button>
             <a href="book.html">More ></a>
           </div>
-        </li>
+        </li> -->
       </ul>
     </main>
 
