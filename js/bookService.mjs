@@ -12,7 +12,7 @@ export const recommendedBookQueries = [
 
 
 
-export function getUrl(searchOption, endpoint, resultNumber=10) {
+export function getUrl(searchOption, endpoint, resultNumber) {
     let searchQuery = "";
     const formattedEndpoint = encodeURIComponent(endpoint.trim());
 
@@ -66,4 +66,28 @@ export async function getRecommendedBooks(recommendedBookQueries) {
     }
 
     return recommendedBooks;
+}
+
+
+// book data attribute
+export function updateBookUrl () {
+    const links = document.querySelectorAll(".book-info-container a");
+    // console.log("Found links:", links.length);
+
+    links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const bookId = link.dataset.bookId;
+
+            if (!bookId) {
+                console.warn("⚠️ No book ID found for this link.");
+                return;
+            }
+
+            // console.log("Book ID:", bookId);
+            const url = `book.html?id=${bookId}`;
+            window.location.href = url;
+        });
+    })
 }

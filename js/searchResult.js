@@ -1,4 +1,4 @@
-import { getUrl, getJson } from "./bookService.mjs";
+import { getUrl, getJson, updateBookUrl } from "./bookService.mjs";
 import { searchResultTemplate } from "./templates.mjs";
 
 
@@ -6,7 +6,7 @@ import { searchResultTemplate } from "./templates.mjs";
 
     const params = new URLSearchParams(window.location.search);
     const searchValue = params.get("q");
-    const searchOption = params.get("option");
+    const searchOption = params.get("option").toLowerCase();
     const searchResultContainer = document.querySelector(".book-list");
     const header = document.querySelector("h1 span");
     header.innerText = `"${searchValue}"`;
@@ -17,6 +17,8 @@ import { searchResultTemplate } from "./templates.mjs";
 
     const searchHtml = searchItems.map(searchResultTemplate);
     searchResultContainer.innerHTML = searchHtml.join(" ");
+
+    updateBookUrl();
 }
 
 fetchData()

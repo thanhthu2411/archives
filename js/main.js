@@ -1,5 +1,5 @@
 import {trendingBookTemplate} from "./templates.mjs";
-import {getTrendingBooks, topBookQueries,recommendedBookQueries, getRecommendedBooks} from "./bookService.mjs";
+import {getTrendingBooks, topBookQueries,recommendedBookQueries, getRecommendedBooks, updateBookUrl} from "./bookService.mjs";
 
 function setTrendingBooks(item) {
     const trendingBookSection = document.querySelector("#trending .books");
@@ -19,6 +19,8 @@ async function init() {
 
     setTrendingBooks(trendingBookData);
     setRecommendedBooks(recommendedBookData);
+
+    updateBookUrl();
 }
 
 init();
