@@ -9,7 +9,7 @@ export function trendingBookTemplate(item) {
                     <img class="book-img" src="${data.imageLinks.smallThumbnail}" />
                 </div>
                 <div class="book-info-container">
-                    <a href="book.html" data-book-id="zyTCAlFPjgYC"><h2>${data.title}</h2></a>
+                    <a class="book-link" href="book.html" data-book-id="${item.id}"><h2>${data.title}</h2></a>
                     <p><strong>Author</strong>: ${data.authors.join(", ")}</p>
                     <p><strong>Description</strong>: ${description}</p>
                     <p><strong>Genre</strong>: ${data.categories.join(", ")}</p>
@@ -37,11 +37,11 @@ export function searchResultTemplate(item) {
               Description: ${description}
               elit. 
             </p>
-            <button class="favorite-btn" data-book-id="${item.id}">
+            <button class="add-favorite-btn" data-book-id="${item.id}">
               <svg class="icon">
                 <use xlink:href="images/sprite.symbol.svg#plus-sign"></use></svg>Add to favorites
             </button>
-            <a href="book.html" data-book-id="${item.id}">More ></a>
+            <a class="book-link" href="book.html" data-book-id="${item.id}">More ></a>
           </div>
         </li>
     `
@@ -74,7 +74,7 @@ export function bookTemplate(item) {
           <p><strong>Publish Date:</strong> <span>${data.publishedDate}</span></p>
           <p><strong>Page Count:</strong> <span>${data.pageCount}</span></p>
           <p><strong>Category:</strong> <span>${genre}</span></p>
-          <button class="favorite-btn" data-book-id="${item.id}">
+          <button class="add-favorite-btn" data-book-id="${item.id}">
             <svg class="icon">
               <use xlink:href="images/sprite.symbol.svg#plus-sign"></use>
             </svg>
@@ -88,4 +88,21 @@ export function bookTemplate(item) {
         <p>${description}
         </p>
       </section>`
+}
+
+export function favoriteBookTemplate(item) {
+    const data = item.volumeInfo;
+    const authors = data.authors ? data.authors.join(", ") : "Unknown author";
+
+    return `
+          <li class="book-info-container" data-book-id="${item.id}">
+            <a class="book-link" href="book.html" data-book-id="${item.id}">
+                <h2>${data.title}</h2>
+            </a>
+            <p>by <span>${authors}</span></p>
+            <button class="remove-favorite-btn" data-book-id="${item.id}">
+              Remove from favorites
+            </button>
+        </li>
+    `
 }

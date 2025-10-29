@@ -1,0 +1,62 @@
+main {
+    min-height: 100vh;
+}
+
+.favorite-list {
+    list-style: none;
+    padding: 1rem;
+}
+
+li {
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid rgb(182, 180, 180);
+}
+
+li h2 {
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+li p {
+    margin: none;
+    padding: none;
+    font-size: 1rem;
+}
+
+li p span {
+    color: red;
+}
+
+.remove-favorite-btn {
+    display: block;
+    padding: 0.5rem;
+    background-color: var(--bs-blue-1);
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.remove-favorite-btn:active {
+    animation: click 0.25s ease-out;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 768px) {
+    .favorite-list {
+        display: block;
+        margin: 1rem auto;
+        width: 70%;
+    }
+}

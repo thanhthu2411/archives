@@ -44,11 +44,27 @@ li {
     font-size: 1rem;
 }
 
-.book-info-container button {
+.book-info-container .add-favorite-btn {
     background-color: var(--bs-blue-1);
     border: none;
     border-radius: 4px;
     padding: 0.5rem 1rem;
+}
+
+.add-favorite-btn:active {
+    animation: click 0.25s ease-out;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .book-info-container .icon {

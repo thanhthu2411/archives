@@ -10,6 +10,8 @@ export const recommendedBookQueries = [
   "Pride and Prejudice"
 ];
 
+export let favoriteBooks = JSON.parse(localStorage.getItem("favoriteBooks")) || [];
+
 
 
 export function getUrl(searchOption, endpoint, resultNumber) {
@@ -69,10 +71,10 @@ export async function getRecommendedBooks(recommendedBookQueries) {
 }
 
 
-// book data attribute
+// book data attribute (for book.html)
 export function updateBookUrl () {
-    const links = document.querySelectorAll(".book-info-container a");
-    // console.log("Found links:", links.length);
+    const links = document.querySelectorAll(".book-link");
+    console.log("Found links:", links.length);
 
     links.forEach((link) => {
         link.addEventListener("click", (event) => {
@@ -90,4 +92,60 @@ export function updateBookUrl () {
             window.location.href = url;
         });
     })
+}
+
+
+// favorite books section
+export function updateFavoriteList() {
+    const buttons = document.querySelectorAll(".add-favorite-btn");
+    console.log("Button found", buttons.length);
+
+    buttons.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const bookId = btn.dataset.bookId;
+
+            if (!bookId) {
+                console.warn("⚠️ No book ID found for this link.");
+                return;
+            }
+
+            if(!favoriteBooks.includes(bookId)) {
+                favoriteBooks.push(bookId);
+                localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
+            } else {
+                alert("This book is already in the list!")
+            }
+
+        })
+    })
+}
+
+export function removeFavoriteBook() {
+    const removeBtns = document.querySelectorAll(".remove-favorite-btn");
+    console.log("Button found", removeBtns.length);
+
+    removeBtns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const bookId = btn.dataset.bookId;
+            favoriteBooks = favoriteBooks.filter(id => id !== bookId);
+            localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
+
+            location.reload();
+        })
+    })
+}
+
+export async function getFavoriteBook(favoriteBooks) {
+    let favoriteBookData = [];
+    for (const id of favoriteBooks) {
+        const url = `https://www.googleapis.com/books/v1/volumes/${id}`;
+        const favoriteBook = await getJson(url);
+        favoriteBookData.push(favoriteBook);
+    }
+
+    return favoriteBookData;
 }

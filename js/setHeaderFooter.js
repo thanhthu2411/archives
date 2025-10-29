@@ -41,6 +41,17 @@ export function dropdownMenuToggle () {
     })
 }
 
+// favorite button
+// export function openFavoriteList() {
+//     const favoriteBtn = document.querySelector(".favorite-btn");
+//     const favoriteList = document.querySelector(".favorite-list");
+
+//     favoriteBtn.addEventListener("click", () => {
+        
+//     })
+// }
+
+
 
 
 

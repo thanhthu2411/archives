@@ -80,6 +80,10 @@ header button {
     padding: 1rem;
 }
 
+/* favorite book list  */
+
+
+
 @media(max-width: 767px) {
     .search-input {
         flex: none;
