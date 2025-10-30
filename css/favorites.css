@@ -7,24 +7,24 @@ main {
     padding: 1rem;
 }
 
-li {
+.favorite-list li {
     padding: 1rem;
     margin: 1rem;
     border-bottom: 1px solid rgb(182, 180, 180);
 }
 
-li h2 {
+.favorite-list li h2 {
     text-align: left;
     font-size: 1.4rem;
 }
 
-li p {
+.favorite-list li p {
     margin: none;
     padding: none;
     font-size: 1rem;
 }
 
-li p span {
+.favorite-list li p span {
     color: red;
 }
 
