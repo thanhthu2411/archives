@@ -80,3 +80,31 @@ a:hover {
 button:hover {
     cursor: pointer;
 }
+
+
+/* remove from favorite btn */
+.remove-favorite-btn {
+    display: block;
+    padding: 0.5rem;
+    background-color: var(--bs-blue-1);
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.remove-favorite-btn:active {
+    animation: click 0.25s ease-out;
+}
+
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

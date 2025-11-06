@@ -1,4 +1,4 @@
-import { getJson, updateFavoriteList} from "./bookService.mjs";
+import { getJson, updateFavoriteList, updateFavoriteBtn} from "./bookService.mjs";
 import { bookTemplate } from "./templates.mjs";
 
 async function getBookData() {
@@ -17,6 +17,7 @@ async function getBookData() {
 async function init() {
   await getBookData(); 
   updateFavoriteList();
+  updateFavoriteBtn();
 }
 
 init();

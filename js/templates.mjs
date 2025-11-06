@@ -1,4 +1,5 @@
 // this file is to create templates for each part
+import { favoriteBooks } from "./bookService.mjs";
 
 // top favorite books and recommended for you templates (index.html)
 export function trendingBookTemplate(item) {
@@ -24,7 +25,10 @@ export function searchResultTemplate(item) {
     const authors = data.authors ? data.authors.join(", ") : "Unknown author";
     const genre = data.categories ? data.categories.join(", ") : "Not known";
     const thumbnail = data.imageLinks ? data.imageLinks.thumbnail : "images/no-photo.jpg";
-
+    const favoriteBtnHtml = favoriteBooks.includes(item.id) ? "Remove from favorites" : `<svg class="icon">
+              <use xlink:href="images/sprite.symbol.svg#plus-sign"></use>
+            </svg>Add to favorites`;
+    const favoriteBtnClass = favoriteBooks.includes(item.id) ? "remove-favorite-btn" : "add-favorite-btn";
 
     return ` <li data-book-id="${item.id}">
           <img class="book-img" src="${thumbnail}" />
@@ -37,9 +41,8 @@ export function searchResultTemplate(item) {
               Description: ${description}
               elit. 
             </p>
-            <button class="add-favorite-btn" data-book-id="${item.id}">
-              <svg class="icon">
-                <use xlink:href="images/sprite.symbol.svg#plus-sign"></use></svg>Add to favorites
+            <button class="${favoriteBtnClass}" data-book-id="${item.id}">
+                ${favoriteBtnHtml}
             </button>
             <a class="book-link" href="book.html" data-book-id="${item.id}">More ></a>
           </div>
@@ -57,6 +60,11 @@ export function bookTemplate(item) {
     const thumbnail = data.imageLinks ? data.imageLinks.thumbnail : "images/no-photo.jpg";
     const averageRating = data.averageRating ? data.averageRating : "--";
     const ratingsCount = data.ratingsCount ? data.ratingsCount : "Not known";
+    // const favoriteBtnText = favoriteBooks.includes(item.id) ? "Remove from favorites" : "Add to favorites";
+    const favoriteBtnClass = favoriteBooks.includes(item.id) ? "remove-favorite-btn" : "add-favorite-btn";
+    const favoriteBtnHtml = favoriteBooks.includes(item.id) ? "Remove from favorites" : `<svg class="icon">
+              <use xlink:href="images/sprite.symbol.svg#plus-sign"></use>
+            </svg>Add to favorites`;
 
     return `<h1 class="book-title">${data.title}</h1>
       <p class="book-rating">Rating: ${averageRating}/5 (${ratingsCount} ratings)</p>
@@ -74,11 +82,9 @@ export function bookTemplate(item) {
           <p><strong>Publish Date:</strong> <span>${data.publishedDate}</span></p>
           <p><strong>Page Count:</strong> <span>${data.pageCount}</span></p>
           <p><strong>Category:</strong> <span>${genre}</span></p>
-          <button class="add-favorite-btn" data-book-id="${item.id}">
-            <svg class="icon">
-              <use xlink:href="images/sprite.symbol.svg#plus-sign"></use>
-            </svg>
-            Add to Favorites
+          <button class="${favoriteBtnClass}" data-book-id="${item.id}">
+            
+            ${favoriteBtnHtml}
           </button>
         </div>
       </section>

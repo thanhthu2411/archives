@@ -1,5 +1,5 @@
 import { favoriteBookTemplate } from "./templates.mjs";
-import { getFavoriteBook, favoriteBooks, updateBookUrl, removeFavoriteBook } from "./bookService.mjs";
+import { getFavoriteBook, favoriteBooks, updateBookUrl, removeFavoriteCard } from "./bookService.mjs";
 
 function setFavoriteBook(data) {
     const favoriteList = document.querySelector(".favorite-list");
@@ -11,7 +11,7 @@ async function init() {
     setFavoriteBook(favoriteBookData);
     // console.log(favoriteBooks[0]);
     updateBookUrl();
-    removeFavoriteBook();
+    removeFavoriteCard();
 }
 
 init()

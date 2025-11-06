@@ -30,7 +30,7 @@ export function getUrl(searchOption, endpoint, resultNumber) {
         searchQuery = `${formattedEndpoint}`;
     }
 
-    const url = `${baseUrl}?q=${searchQuery}&maxResults=${resultNumber}&key=${apiKey}`;
+    const url = `${baseUrl}?q=${searchQuery}&maxResults=${resultNumber}&startIndex=0&key=${apiKey}`;
     
     return url;
 }
@@ -96,10 +96,20 @@ export function updateBookUrl () {
 
 
 // favorite books section
+export async function getFavoriteBook(favoriteBooks) {
+    let favoriteBookData = [];
+    for (const id of favoriteBooks) {
+        const url = `https://www.googleapis.com/books/v1/volumes/${id}`;
+        const favoriteBook = await getJson(url);
+        favoriteBookData.push(favoriteBook);
+    }
+
+    return favoriteBookData;
+}
+
 export function updateFavoriteList() {
     const buttons = document.querySelectorAll(".add-favorite-btn");
-    console.log("Button found", buttons.length);
-
+    // add a book to favorite list
     buttons.forEach((btn) => {
         btn.addEventListener("click", (event) => {
             event.preventDefault();
@@ -114,7 +124,13 @@ export function updateFavoriteList() {
             if(!favoriteBooks.includes(bookId)) {
                 favoriteBooks.push(bookId);
                 localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
-            } else {
+
+                //update btn
+                btn.className = "remove-favorite-btn";
+                btn.innerHTML = `Remove from favorites`;
+
+            } else 
+            {
                 alert("This book is already in the list!")
             }
 
@@ -122,30 +138,64 @@ export function updateFavoriteList() {
     })
 }
 
-export function removeFavoriteBook() {
-    const removeBtns = document.querySelectorAll(".remove-favorite-btn");
-    console.log("Button found", removeBtns.length);
+// export function removeFavoriteBook() {
+//     const removeBtns = document.querySelectorAll(".remove-favorite-btn");
+//     console.log("Button found", removeBtns.length);
 
+//     removeBtns.forEach((btn) => {
+//         btn.addEventListener("click", (event) => {
+//             event.preventDefault();
+
+//             const bookId = btn.dataset.bookId;
+//             favoriteBooks = favoriteBooks.filter(id => id !== bookId);
+//             localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
+
+//         })
+//     })
+// }
+
+function removeFavoriteId(id) {
+  favoriteBooks = favoriteBooks.filter(x => x !== id);
+  localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
+}
+
+
+// when remove btn is clicked, the btn change to add-to-favorite
+// for book.html and searchresults.html
+export function updateFavoriteBtn() {
+    const removeBtns = document.querySelectorAll(".remove-favorite-btn");
     removeBtns.forEach((btn) => {
         btn.addEventListener("click", (event) => {
             event.preventDefault();
 
             const bookId = btn.dataset.bookId;
-            favoriteBooks = favoriteBooks.filter(id => id !== bookId);
-            localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
+            removeFavoriteId(bookId);
 
-            location.reload();
+            btn.className = "add-favorite-btn";
+            btn.innerHTML = `<svg class='icon'>
+              <use xlink:href='images/sprite.symbol.svg#plus-sign'></use>
+            </svg>Add to favorites`;
         })
     })
 }
 
-export async function getFavoriteBook(favoriteBooks) {
-    let favoriteBookData = [];
-    for (const id of favoriteBooks) {
-        const url = `https://www.googleapis.com/books/v1/volumes/${id}`;
-        const favoriteBook = await getJson(url);
-        favoriteBookData.push(favoriteBook);
-    }
 
-    return favoriteBookData;
+
+// when remove btn is clicked, the div of that book is removed
+// for favorites.html
+export function removeFavoriteCard() {
+    const removeBtns = document.querySelectorAll(".remove-favorite-btn");
+    removeBtns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const bookId = btn.dataset.bookId;
+            removeFavoriteId(bookId);
+
+            const li = btn.closest("li.book-info-container");
+            li.remove();
+            
+        })
+    })
+
 }
