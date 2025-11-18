@@ -141,6 +141,14 @@ header button {
 }
 
 @media(min-width: 768px) {
+
+      .search-form.active-form {
+    display: flex; /* or display: flex; depending on your desktop design */
+    position: static;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
         
     header { 
         padding: 0.5rem;

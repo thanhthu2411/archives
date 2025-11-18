@@ -19,6 +19,16 @@ export function searchFormToggle () {
         searchForm.classList.remove("active-form");
         closeBtn.remove();
     })
+
+    window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+        searchForm.classList.remove("active-form");
+        if (searchForm.contains(closeBtn)) {
+            closeBtn.remove();
+        }
+    }
+})
+
 };
 
 export function dropdownMenuToggle () {
