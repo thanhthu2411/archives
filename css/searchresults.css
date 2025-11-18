@@ -16,7 +16,7 @@ main h1 {
     margin: 0;
 }
 
-li {
+.book-list li {
     border-bottom: 1px solid var(  --bs-grey-3);
     padding: 1.5rem 0;
     width: 100%;
