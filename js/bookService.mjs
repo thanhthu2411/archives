@@ -74,7 +74,6 @@ export async function getRecommendedBooks(recommendedBookQueries) {
 // book data attribute (for book.html)
 export function updateBookUrl () {
     const links = document.querySelectorAll(".book-link");
-    console.log("Found links:", links.length);
 
     links.forEach((link) => {
         link.addEventListener("click", (event) => {
@@ -83,11 +82,9 @@ export function updateBookUrl () {
             const bookId = link.dataset.bookId;
 
             if (!bookId) {
-                console.warn("⚠️ No book ID found for this link.");
-                return;
+                console.warn("No book ID for this link.");
             }
 
-            // console.log("Book ID:", bookId);
             const url = `book.html?id=${bookId}`;
             window.location.href = url;
         });
@@ -117,8 +114,7 @@ export function updateFavoriteList() {
             const bookId = btn.dataset.bookId;
 
             if (!bookId) {
-                console.warn("⚠️ No book ID found for this link.");
-                return;
+                console.warn("No book ID for this link.");
             }
 
             if(!favoriteBooks.includes(bookId)) {
