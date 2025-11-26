@@ -1,4 +1,6 @@
-
+/* body {
+    position: relative;
+} */
 
 .hero-left {
     margin-bottom: 1rem;
@@ -153,23 +155,68 @@
     font-size: 0.9rem;
 }
 
+.contact-us-container {
+    display: none;
+}
+
+.contact-us-container.slide-in {
+    border: 1px solid rgb(206, 204, 204);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    right: 0;
+    top: 70%;
+    width: 300px;
+    height: 150px;
+    position: fixed;
+    background-color: rgb(235, 235, 232);
+    display: block;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+
+.contact-us-container p {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
 .feedback-btn {
   display: block;
-  background-color: var(--bs-blue-1);
-  padding: 10px 20px;
-  border-radius: 2rem;
+  /* background-color: var(--bs-blue-1); */
+  /* padding: 10px 20px; */
+  /* border-radius: 0.5rem; */
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  margin: 1.5rem auto;
-  width: 350px;
+  margin: 1rem auto;
+  width: 150px;
   text-align: center;
-  color: var(--bs-blue-2);
+  color: blue;
 }
 
 .feedback-btn:hover {
-  background-color: #91b7dd; 
   transform: translateY(-2px);
+}
+
+.fb-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    background-color: transparent;
+    border: none;
+    padding: none;
+    font-weight: bold;
 }
 
 @media (min-width: 768px) {
