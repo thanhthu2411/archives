@@ -1,4 +1,4 @@
-import { getUrl, getJson, updateBookUrl, updateFavoriteList, updateFavoriteBtn } from "./bookService.mjs";
+import { getUrl, getJson, updateBookUrl, updateFavoList} from "./bookService.mjs";
 import { searchResultTemplate } from "./templates.mjs";
 
 
@@ -19,8 +19,7 @@ import { searchResultTemplate } from "./templates.mjs";
     searchResultContainer.innerHTML = searchHtml.join(" ");
 
     updateBookUrl();
-    updateFavoriteList();
-    updateFavoriteBtn();
+    updateFavoList();
 
 }
 

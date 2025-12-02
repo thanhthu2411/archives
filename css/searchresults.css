@@ -45,13 +45,42 @@ main h1 {
 }
 
 .book-info-container .add-favorite-btn {
-    background-color: var(--bs-blue-1);
+    display: block;
+    padding: 0.7rem;
+    background-color: #cadbe7;
     border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .add-favorite-btn:active {
+    animation: click 0.25s ease-out;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.book-info-container .remove-favorite-btn {
+    display: block;
+    padding: 0.7rem;
+    background-color: #cadbe7;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.remove-favorite-btn:active {
     animation: click 0.25s ease-out;
 }
 

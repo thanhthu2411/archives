@@ -25,10 +25,13 @@ main {
 }
 
 .extra-info .add-favorite-btn {
-    background-color: var(--bs-blue-1);
+    display: block;
+    padding: 0.7rem;
+    background-color: #cadbe7;
     border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .add-favorite-btn:active {
@@ -38,12 +41,15 @@ main {
 /* remove from favorite btn */
 .remove-favorite-btn {
     display: block;
-    padding: 0.5rem;
-    background-color: var(--bs-blue-1);
+    padding: 0.7rem;
+    background-color: #cadbe7;
     border: none;
     border-radius: 5px;
     margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
 }
+
 
 .remove-favorite-btn:active {
     animation: click 0.25s ease-out;
