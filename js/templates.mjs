@@ -7,7 +7,7 @@ export function trendingBookTemplate(item) {
     const description = data.description.split(" ").slice(0, 20).join(" ") + "...";
     return `<div class="book" data-book-id="${item.id}">
                 <div class="img-container">
-                    <img class="book-img" src="${data.imageLinks.smallThumbnail}" />
+                    <img class="book-img" src="${data.imageLinks.smallThumbnail}" alt="book image"/>
                 </div>
                 <div class="book-info-container">
                     <a class="book-link" href="book.html" data-book-id="${item.id}"><h2>${data.title}</h2></a>
@@ -31,7 +31,7 @@ export function searchResultTemplate(item) {
     const favoriteBtnClass = favoriteBooks.includes(item.id) ? "remove-favorite-btn" : "add-favorite-btn";
 
     return ` <li data-book-id="${item.id}">
-          <img class="book-img" src="${thumbnail}" />
+          <img class="book-img" src="${thumbnail}" alt="book thumbnail"/>
           <h2>${data.title}</h2>
 
           <div class="book-info-container">

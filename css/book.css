@@ -39,7 +39,7 @@ main {
 }
 
 /* remove from favorite btn */
-.remove-favorite-btn {
+.extra-info .remove-favorite-btn {
     display: block;
     padding: 0.7rem;
     background-color: #cadbe7;
