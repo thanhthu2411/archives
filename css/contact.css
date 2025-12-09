@@ -40,13 +40,13 @@ main {
 }
 
 .contact-form-container button {
-    padding: 7px 10px;
+    padding: 10px 20px;
     border: none;
     background-color: var(--bs-blue-1);
     margin: 8px auto;
     display: block;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border: 1px solid rgb(204, 201, 201);
     /* display: none; */
