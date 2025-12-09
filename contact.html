@@ -10,7 +10,7 @@
     <script type="module" src="js/contact.js"></script>
   </head>
   <body>
-        <header>
+    <header>
       <section class="header-left">
         <a href="index.html">
           <img class="logo" src="images/logo.png" alt="logo of the webapp" />
@@ -19,7 +19,7 @@
 
       <section class="header-right">
         <!-- search icon  -->
-        <button class="search-btn">
+        <button class="search-btn" aria-label="Search button">
           <svg class="icon">
             <use xlink:href="images/sprite.symbol.svg#search"></use>
           </svg>
@@ -33,13 +33,13 @@
             placeholder="Please enter a keyword ..."
             required
           />
-          <select name="option">
+          <select name="option" aria-label="Choose a category">
             <option>All</option>
             <option>Author</option>
             <option>Title</option>
             <option>Genre</option>
           </select>
-          <button type="submit">
+          <button type="submit" aria-label="Submit button">
             <svg class="icon">
               <use xlink:href="images/sprite.symbol.svg#search"></use>
             </svg>
@@ -63,7 +63,6 @@
             </svg>
             Your Favorites
           </a>
-
         </nav>
       </section>
     </header>
@@ -156,7 +155,8 @@
         <p>Thank you for your feedback!</p>
         <button>
           <svg class="icon">
-            <use xlink:href="images/sprite.symbol.svg#close"></use></svg>
+            <use xlink:href="images/sprite.symbol.svg#close"></use>
+          </svg>
         </button>
       </div>
     </main>
@@ -188,17 +188,17 @@
       </section>
       <!-- right  -->
       <section class="footer-right">
-        <a class="social-link" target="_bFlank" href="https://facebook.com">
+        <a class="social-link" target="_bFlank" aria-label="Facebook" href="https://facebook.com">
           <svg class="icon">
             <use xlink:href="images/sprite.symbol.svg#facebook"></use>
           </svg>
         </a>
-        <a class="social-link" target="_bFlank" href="https://instagram.com">
+        <a class="social-link" target="_bFlank" aria-label="Instagram" href="https://instagram.com">
           <svg class="icon">
             <use xlink:href="images/sprite.symbol.svg#instagram"></use>
           </svg>
         </a>
-        <a class="social-link" target="_bFlank" href="https://twitter.com">
+        <a class="social-link" target="_bFlank" aria-label="Twitter" href="https://twitter.com">
           <svg class="icon">
             <use xlink:href="images/sprite.symbol.svg#twitter"></use>
           </svg>
