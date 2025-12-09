@@ -1,8 +1,15 @@
 footer {
+    background-color: var( --bs-blue-1);
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 1rem 2rem;
+    padding-top: 2rem;
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
-    background-color: var( --bs-blue-1);
-    padding: 1.5rem 2rem;
+    margin-bottom: 2.2rem;
 }
 
 
@@ -25,6 +32,8 @@ footer {
     font-size: 1rem;
     text-align: center;
     display: block;
+        font-weight: 500;
+
 }
 
 .footer-links a:hover {
@@ -45,8 +54,9 @@ footer {
 }
 
 @media (min-width: 766px) {
-    footer {
-        padding: 2rem 2rem;
+    .footer {
+        /* padding: 0rem 5rem; */
+
     }
 
     .footer-links {
@@ -73,4 +83,17 @@ footer {
     .footer-right {
         gap: 2rem;
     }
+}
+
+.copyright-container {
+    text-align: center;
+    padding: 1rem 5rem;
+    border-top: 1px solid rgb(25, 10, 78);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.copyright-container p {
+    /* padding-top: 1.5rem; */
+    font-size: 0.8rem;
 }

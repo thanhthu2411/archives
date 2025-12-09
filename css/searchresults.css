@@ -44,7 +44,7 @@ main h1 {
     font-size: 1rem;
 }
 
-.book-info-container .add-favorite-btn {
+/* .book-info-container .add-favorite-btn {
     display: block;
     padding: 0.7rem;
     background-color: #cadbe7;
@@ -94,7 +94,7 @@ main h1 {
     100% {
         transform: scale(1);
     }
-}
+} */
 
 .book-info-container .icon {
     width: 10px;

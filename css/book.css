@@ -24,7 +24,7 @@ main {
      object-fit: cover;
 }
 
-.extra-info .add-favorite-btn {
+/* .extra-info .add-favorite-btn {
     display: block;
     padding: 0.7rem;
     background-color: #cadbe7;
@@ -66,7 +66,7 @@ main {
     100% {
         transform: scale(1);
     }
-}
+} */
 
 .extra-info .icon {
     width: 15px;

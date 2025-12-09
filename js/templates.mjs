@@ -36,9 +36,9 @@ export function searchResultTemplate(item) {
 
           <div class="book-info-container">
             <p>By <span>${authors}</span></p>
-            <p>Genre: ${genre}</p>
+            <p><strong>Genre:</strong> ${genre}</p>
             <p>
-              Description: ${description}
+              <strong>Description:</strong> ${description}
             </p>
             <button class="${favoriteBtnClass}" data-book-id="${item.id}">
                 ${favoriteBtnHtml}

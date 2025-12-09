@@ -28,7 +28,7 @@
     color: red;
 }
 
-.remove-favorite-btn {
+/* .remove-favorite-btn {
     display: block;
     padding: 0.7rem;
     background-color: #cadbe7;
@@ -52,7 +52,7 @@
     100% {
         transform: scale(1);
     }
-}
+} */
 
 @media (min-width: 768px) {
     .favorite-list {

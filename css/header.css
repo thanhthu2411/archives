@@ -74,6 +74,12 @@ header button {
     margin-left: 8px;
     flex-shrink: 0;
     /* border: none; */
+    
+    background-color: #f7f7f7; 
+    
+    /* Add padding for better spacing */
+    padding: 8px 30px 8px 10px;
+    font-size: 14px;
 }
 
 .search-form button {
@@ -97,7 +103,7 @@ header button {
     padding: 1rem;
 }
 
-@media(max-width: 780px) {
+@media(max-width: 800px) {
     .search-box {
         flex: none;
         /* width: 350px; */
@@ -131,6 +137,11 @@ header button {
 .nav-container a {
     text-decoration: none;
     color: black;
+    font-weight: 500;
+}
+
+.nav-container a:hover {
+    text-decoration: underline;
 }
 
 .favorite-btn {
@@ -157,7 +168,7 @@ header button {
 
 }
 
-@media(min-width: 780px) {
+@media(min-width: 800px) {
         
     header { 
         padding: 0.5rem;
@@ -194,7 +205,7 @@ header button {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.8rem;
+        gap: 1rem;
     }
 
     .nav-container a, .nav-container button {

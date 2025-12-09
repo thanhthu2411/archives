@@ -27,24 +27,30 @@
         </button>
 
         <form action="searchresults.html" method="get" class="search-form">
-          <input
-            name="q"
-            class="search-input"
-            type="text"
-            placeholder="Please enter a keyword ..."
-            required
-          />
+          <div class="search-box">
+            <input
+              name="q"
+              class="search-input"
+              type="text"
+              placeholder="Please enter a keyword ..."
+              required
+            />
+            <button
+              type="submit"
+              class="search-btn-2"
+              aria-label="Submit button"
+            >
+              <svg class="icon">
+                <use xlink:href="images/sprite.symbol.svg#search"></use>
+              </svg>
+            </button>
+          </div>
           <select name="option" aria-label="Choose a category">
             <option>All</option>
             <option>Author</option>
             <option>Title</option>
             <option>Genre</option>
           </select>
-          <button type="submit" aria-label="Submit button">
-            <svg class="icon">
-              <use xlink:href="images/sprite.symbol.svg#search"></use>
-            </svg>
-          </button>
         </form>
 
         <!-- drop down menu  -->
@@ -150,7 +156,8 @@
     </main>
 
     <!-- FOOTER  -->
-    <footer>
+        <footer>
+      <div class="footer-container">
       <!-- left  -->
       <section class="footer-left">
         <a href="index.html">
@@ -176,21 +183,42 @@
       </section>
       <!-- right  -->
       <section class="footer-right">
-        <a class="social-link" target="_bFlank" aria-label="Facebook" href="https://facebook.com">
+        <a
+          class="social-link"
+          target="_bFlank"
+          aria-label="Facebook"
+          href="https://facebook.com"
+        >
           <svg class="icon">
             <use xlink:href="images/sprite.symbol.svg#facebook"></use>
           </svg>
         </a>
-        <a class="social-link" target="_bFlank" aria-label="Instagram" href="https://instagram.com">
+        <a
+          class="social-link"
+          target="_bFlank"
+          aria-label="Instagram"
+          href="https://instagram.com"
+        >
           <svg class="icon">
             <use xlink:href="images/sprite.symbol.svg#instagram"></use>
           </svg>
         </a>
-        <a class="social-link" target="_bFlank" aria-label="Twitter" href="https://twitter.com">
+        <a
+          class="social-link"
+          target="_bFlank"
+          aria-label="Twitter"
+          href="https://twitter.com"
+        >
           <svg class="icon">
             <use xlink:href="images/sprite.symbol.svg#twitter"></use>
           </svg>
         </a>
+      </section>
+
+      </div>
+
+      <section class="copyright-container">
+        <p>© Copyright 2025 . Made by <em><strong>Thu&Faith</strong></em></p>
       </section>
     </footer>
   </body>

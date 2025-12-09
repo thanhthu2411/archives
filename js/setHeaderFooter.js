@@ -21,7 +21,7 @@ export function searchFormToggle () {
     })
 
     window.addEventListener("resize", () => {
-    if (window.innerWidth >= 780) {
+    if (window.innerWidth >= 800) {
         searchForm.classList.remove("active-form");
         if (searchForm.contains(closeBtn)) {
             closeBtn.remove();
