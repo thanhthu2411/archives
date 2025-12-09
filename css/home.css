@@ -78,9 +78,6 @@
     gap: 1.8rem;
 }
 
-.recommended-container .book {
-    /* background-color: white; */
-}
 
 .favorite-container .book, .feebback-container .feedback {
     background-color: rgb(251, 249, 249);
@@ -187,7 +184,7 @@
     top: 65%;
     width: 300px;
     height: auto;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     position: fixed;
     background-color: rgb(249, 249, 249);
     display: block;
@@ -209,6 +206,13 @@
 .contact-us-container p {
     text-align: center;
     margin-top: 2rem;
+}
+
+.feedback {
+    transition: transform 0.4s ease-in-out;
+}
+.feedback:hover {
+    transform: translateY(-2px);
 }
 
 

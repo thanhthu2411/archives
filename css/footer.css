@@ -51,6 +51,11 @@ footer {
 
 .footer-right a {
     text-decoration: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.footer-right a:hover {
+    transform: scale(1.05);
 }
 
 @media (min-width: 766px) {
