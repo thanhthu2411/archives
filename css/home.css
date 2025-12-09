@@ -3,7 +3,7 @@
 } */
 
 .hero-left {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .hero-left img {
@@ -45,11 +45,22 @@
 
 /* favorite books  */
 .recommended-container, .favorite-container, .feebback-container {
-    padding: 1rem 2rem;
+    padding: 4rem 2rem;
     margin-bottom: 2.5rem;
 }
+
+.recommended-container {
+    background-color: rgb(251, 249, 249);
+}
+
+/* .recommended-container .book-info-container,
+ {
+    background-color: white;
+} */
+
 .recommended-container h1, .favorite-container h1, .feebback-container h1 {
     font-size: 1.8rem;
+    /* text-transform: uppercase; */
 }
 .recommended-container > p, .favorite-container > p {
  text-align: center;
@@ -65,6 +76,14 @@
     flex-direction: column;
     align-items: center;
     gap: 1.8rem;
+}
+
+.recommended-container .book {
+    /* background-color: white; */
+}
+
+.favorite-container .book, .feebback-container .feedback {
+    background-color: rgb(251, 249, 249);
 
 }
 
@@ -96,8 +115,9 @@
     margin-bottom: 1rem;
 }
 
-.book h2 {
+.book-info-container a h2 {
     font-size: 1.3rem;
+    margin-top: 1.5rem;
 }
 
 .book p {
